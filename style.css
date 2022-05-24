@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr minmax(1000px ,6fr) 1fr;
+    grid-template-rows: 2fr 14fr 1fr;
+}
+
+.header {
+    grid-area: 1 / 1 / 2 / -1;
+}
+
+.main-content {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.footer {
+    grid-area: 3 / 1 / 4 / -1;
+}
