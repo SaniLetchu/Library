@@ -1,4 +1,32 @@
 let myLibrary = [];
+const form = document.getElementById("form");
+const plusSign = document.querySelector(".plussign");
+const closeForm = document.getElementById("closeform");
+
+//hides the form initially
+form.style.visibility = "hidden";
+form.style.display = "none";
+
+//Event listener for plusSign
+plusSign.addEventListener("click", appearForm);
+
+//Event listener for x symbol
+closeForm.addEventListener("click", hideForm);
+
+function hideForm() {
+    form.style.visibility = "hidden";
+    form.style.display = "none";
+    plusSign.style.display = "initial";
+    plusSign.style.visibility = "visible";
+}
+
+function appearForm() {
+    form.style.visibility = "visible";
+    form.style.display = "initial";
+    plusSign.style.visibility = "hidden";
+    plusSign.style.display = "none";
+}
+
 
 function Book(title, author, pages, read) {
   this.title = title;
