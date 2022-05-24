@@ -2,6 +2,7 @@ let myLibrary = [];
 const form = document.getElementById("form");
 const plusSign = document.querySelector(".plussign");
 const closeForm = document.getElementById("closeform");
+const cards = document.querySelector(".main-content");
 
 //hides the form initially
 form.style.visibility = "hidden";
@@ -47,7 +48,7 @@ function addBookToLibrary(title, author, pages, read) {
   myLibrary.push(book);
 }
 
-//Some books for the library
+//Some initial books for the library
 addBookToLibrary("A Game of Thrones", "George R. R. Martin", 694, false);
 addBookToLibrary("A Clash of Kings", "George R. R. Martin", 768, false);
 addBookToLibrary("A Storm of Swords", "George R. R. Martin", 973, false);
@@ -55,5 +56,39 @@ addBookToLibrary("A Feast for Crows", "George R. R. Martin", 753, false);
 addBookToLibrary("A Dance with Dragons", "George R. R. Martin", 1056, false);
 
 function displayLibrary() {
+    for(let i = 0; i < myLibrary.length; i++) {
+        let book = myLibrary[i];
+        let div = document.createElement('div');
+        div.setAttribute("id", `${i}`);
+        div.classList.add("bookcard");
 
+        let cardHeader = document.createElement('div');
+        cardHeader.classList.add("cardheader");
+        let eyeSymbol = document.createElement('img');
+        let deleteSymbol = document.createElement('img');
+        eyeSymbol.setAttribute("src", "./SVG/eye.svg");
+        deleteSymbol.setAttribute("src", "./SVG/delete.svg");
+        cardHeader.appendChild(eyeSymbol);
+        cardHeader.appendChild(deleteSymbol);
+
+        let titleName = document.createElement('h2');
+        let author = document.createElement('p');
+        let pages = document.createElement('p');
+        let read = document.createElement('p');
+
+        titleName.textContent = book.title;
+        author.textContent = book.author;
+        pages.textContent = book.pages;
+        read.textContent = book.read;
+
+        //Adds content to the bookcard in the correct order
+        div.appendChild(cardHeader);
+        div.appendChild(titleName);
+        div.appendChild(author);
+        div.appendChild(pages);
+        div.appendChild(read);
+        cards.appendChild(div);
+    }
 }
+
+displayLibrary();

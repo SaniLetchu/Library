@@ -93,6 +93,23 @@ input {
     background-color: rgb(30, 173, 255);
 }
 
+.main-content > .bookcard {
+    display: grid;
+    padding: 10px;
+    grid-auto-rows: 1fr;
+}
+
+.main-content > .bookcard > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content > .bookcard > div > img {
+    max-width: 25%;
+    max-height: 25%;
+    cursor: pointer;
+}
+
 .footer {
     grid-area: 3 / 1 / 4 / -1;
     display: flex;
