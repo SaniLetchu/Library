@@ -13,11 +13,11 @@
         <img src="./SVG/library.svg">
         <div>
             <h1>Library</h1>
-            <p>Locally stored basic library of books</p>
+            <p>Locally stored library of books</p>
         </div>
     </div>
     <div class="main-content">
-        <div id="form">
+        <div id="form" onsubmit="return false">
             <form>
                 <img id="closeform" src="./SVG/x.svg">
                 <label for="title">Title:</label>
@@ -26,7 +26,7 @@
                 <input type="text" id="author" name="author" required>
                 <label for="pages">Pages:</label>
                 <input type="number" id="pages" name="pages" required>
-                <label for="title">Is read:</label>
+                <label for="title">Has been read:</label>
                 <input type="checkbox" id="read" name="read">
                 <input type="submit" value="Submit">
             </form>

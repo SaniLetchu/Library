@@ -30,12 +30,16 @@ body {
     margin: 0;
 }
 .header > div > h1 {
-    font-size: 4vh;
+    font-size: max(5vh, 30px);
 }
 .header > div > p {
-    font-size: 2vh;
+    font-size: max(2vh, 12px);
 }
 
+.eyeSymbol:hover {
+    /*Credit: https://codepen.io/sosuke/pen/Pjoqqp*/
+    filter: invert(11%) sepia(52%) saturate(7351%) hue-rotate(242deg) brightness(73%) contrast(136%);
+}
 .plussign {
     max-width: 25%;
     max-height: 25%;
@@ -114,6 +118,16 @@ h2 {
     display: flex;
     flex-direction: column;
     padding: 10px;
+}
+
+.deleteSymbol:hover {
+    /*Credit: https://codepen.io/sosuke/pen/Pjoqqp*/
+    filter: invert(20%) sepia(85%) saturate(6621%) hue-rotate(356deg) brightness(103%) contrast(117%);
+}
+
+h3 {
+    font-weight: 400;
+    font-style: italic;
 }
 
 .main-content > .bookcard > .cardtext > p {
