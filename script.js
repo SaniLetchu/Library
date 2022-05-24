@@ -19,7 +19,6 @@ function fetchDataForBook() {
     pages.value = 0;
     read.checked = false;
     displayLibrary();
-    hideForm();
 }
 
 //hides the form initially

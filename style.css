@@ -105,6 +105,11 @@ h2 {
 .main-content > .bookcard {
     display: grid;
     grid-template-rows: 1fr 8fr;
+    transition: transform .2s;
+}
+
+.main-content > .bookcard:hover {
+    transform: scale(1.01);
 }
 
 .main-content > .bookcard > .cardheader {
@@ -117,8 +122,10 @@ h2 {
 .main-content > .bookcard > .cardtext {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     padding: 10px;
 }
+
 
 .deleteSymbol:hover {
     /*Credit: https://codepen.io/sosuke/pen/Pjoqqp*/
