@@ -71,22 +71,30 @@ function displayLibrary() {
         cardHeader.appendChild(eyeSymbol);
         cardHeader.appendChild(deleteSymbol);
 
+        let cardText = document.createElement('div');
+        cardText.classList.add("cardtext")
+
         let titleName = document.createElement('h2');
         let author = document.createElement('p');
         let pages = document.createElement('p');
         let read = document.createElement('p');
+        let info = document.createElement('h3');
 
         titleName.textContent = book.title;
-        author.textContent = book.author;
-        pages.textContent = book.pages;
-        read.textContent = book.read;
+        author.textContent = "Author: " + book.author;
+        pages.textContent = "Pages: " + book.pages;
+        read.textContent = "Has been read: " + book.read;
+        info.textContent = book.info();
+
+        cardText.appendChild(titleName);
+        cardText.appendChild(author);
+        cardText.appendChild(pages);
+        cardText.appendChild(read);
+        cardText.appendChild(info);
 
         //Adds content to the bookcard in the correct order
         div.appendChild(cardHeader);
-        div.appendChild(titleName);
-        div.appendChild(author);
-        div.appendChild(pages);
-        div.appendChild(read);
+        div.appendChild(cardText);
         cards.appendChild(div);
     }
 }

@@ -55,7 +55,7 @@ body {
     grid-area: 2 / 2 / 3 / 3;
     display: grid;
     justify-items: start;
-    gap: 30px;
+    gap: 60px;
     grid-template-columns: repeat(auto-fit, minmax(350px, 380px));
     grid-auto-rows: 330px;
 }
@@ -86,7 +86,12 @@ input {
     padding: 5px;
 }
 
+h2 {
+    text-align: center;
+}
+
 .main-content > div {
+    border: solid;
     height: 100%;
     width: 100%;
     border-radius: 15px;
@@ -95,18 +100,29 @@ input {
 
 .main-content > .bookcard {
     display: grid;
-    padding: 10px;
-    grid-auto-rows: 1fr;
+    grid-template-rows: 1fr 8fr;
 }
 
-.main-content > .bookcard > div {
+.main-content > .bookcard > .cardheader {
+    
     display: flex;
+    padding: 10px;
     justify-content: space-between;
 }
 
+.main-content > .bookcard > .cardtext {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.main-content > .bookcard > .cardtext > p {
+    font-size: 18px;
+    line-height: 26px;
+}
+
 .main-content > .bookcard > div > img {
-    max-width: 25%;
-    max-height: 25%;
+    width: 8%;
     cursor: pointer;
 }
 
